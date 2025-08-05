@@ -41,7 +41,7 @@ see a few flaws in the Dockerfile below. But, don't worry! We'll go over them.
     WORKDIR /app
     COPY . .
     RUN yarn install --production
-    CMD ["node", "src/index.js"]
+    CMD ["node", "./src/index.js"]
     ```
 
     Please check that the file `Dockerfile` has no file extension like `.txt`. Some editors may append this file extension automatically and this would result in an error in the next step.
@@ -65,7 +65,7 @@ see a few flaws in the Dockerfile below. But, don't worry! We'll go over them.
     for the final image. Since we named the image `getting-started`, we can refer to that
     image when we run a container.
 
-    The `.` at the end of the `docker build` command tells that Docker should look for the `Dockerfile` in the current directory.
+    The `.` at the end of the `docker build` command tells Docker to look for the `Dockerfile` in the current directory.
 
 ## Starting an App Container
 
